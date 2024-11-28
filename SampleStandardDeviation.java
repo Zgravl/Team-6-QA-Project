@@ -42,24 +42,4 @@ public class SampleStandardDeviation {
         // Return the sample standard deviation
         return Math.sqrt(sampleVariance);
     }
-
-    // Main method for testing (optional)
-    public static void main(String[] args) {
-        List<String> input = List.of(
-                "9",
-                "6",
-                "8",
-                "5",
-                "7",
-                "   ", // Blank line
-                "    "  // Blank line
-        );
-
-        try {
-            double result = calculateSampleStandardDeviation(input);
-            System.out.println("Sample Standard Deviation: " + result);
-        } catch (IllegalArgumentException e) {
-            System.err.println(e.getMessage());
-        }
-    }
 }
