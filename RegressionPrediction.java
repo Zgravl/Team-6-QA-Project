@@ -31,18 +31,4 @@ public class RegressionPrediction {
         // Return the result in the specified format
         return String.format("y = %.15f", y);
     }
-
-    // Main method for testing (optional)
-    public static void main(String[] args) {
-        List<String> input = List.of(
-                "1.535,61.272186542107434, -39.061955918838656" // Valid input
-        );
-
-        try {
-            String result = predictYValue(input);
-            System.out.println("Predicted Value: " + result);
-        } catch (IllegalArgumentException e) {
-            System.err.println(e.getMessage());
-        }
-    }
 }
