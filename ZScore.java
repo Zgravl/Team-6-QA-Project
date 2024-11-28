@@ -32,18 +32,4 @@ public class ZScore{
         // Calculate the z-score
         return (value - mean) / stdDev;
     }
-
-    // Main method for testing (optional)
-    public static void main(String[] args) {
-        List<String> input = List.of(
-                "11.5, 7, 1.5811388300841898" // Single valid line with three numeric values
-        );
-
-        try {
-            double zScore = calculateZScore(input);
-            System.out.println("Z-Score: " + zScore);
-        } catch (IllegalArgumentException e) {
-            System.err.println(e.getMessage());
-        }
-    }
 }
