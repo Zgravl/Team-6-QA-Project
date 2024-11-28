@@ -40,24 +40,4 @@ public class PopulationStandardDeviation{
         // Return the population standard deviation
         return Math.sqrt(populationVariance);
     }
-
-    // Main method for testing (optional)
-    public static void main(String[] args) {
-        List<String> input = List.of(
-                "9",
-                "6",
-                "8",
-                "5",
-                "7",
-                "   ", // Blank line
-                "    "  // Blank line
-        );
-
-        try {
-            double result = calculatePopulationStandardDeviation(input);
-            System.out.println("Population Standard Deviation: " + result);
-        } catch (IllegalArgumentException e) {
-            System.err.println(e.getMessage());
-        }
-    }
 }
