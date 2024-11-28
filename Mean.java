@@ -30,24 +30,3 @@ public class Mean{
         }
         return sum / numbers.size();
     }
-
-    // Main method for testing (optional)
-    public static void main(String[] args) {
-        List<String> input = List.of(
-                "9",
-                "6",
-                "8",
-                "5",
-                "7",
-                "   ", // Blank line
-                "    "  // Blank line
-        );
-
-        try {
-            double result = calculateMean(input);
-            System.out.println("Mean: " + result);
-        } catch (IllegalArgumentException e) {
-            System.err.println(e.getMessage());
-        }
-    }
-}
