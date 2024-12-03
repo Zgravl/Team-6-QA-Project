@@ -12,6 +12,6 @@ This repository contains an overview of our team's web-based calculator project.
 
 
 
-## #architecture
+## (#architecture)
 #### Modules: 
 - Calculator logic
