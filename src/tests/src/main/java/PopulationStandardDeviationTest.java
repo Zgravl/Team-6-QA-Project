@@ -1,6 +1,8 @@
+import org.example.PopulationStandardDeviation;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
+package calculator-logic;
 class PopulationStandardDeviationTest {
 
     @Test

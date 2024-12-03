@@ -1,8 +1,8 @@
+import org.example.LinearRegression;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
+package calculator-logic;
 
 public class LinearRegressionTest {
     @Test
