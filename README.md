@@ -50,8 +50,37 @@ To prepare your environment to execute this application:
 ## Executing Unit Tests
 1. Make sure that you have maven, java, as well as a jdk installed installed
 2. Open the project file on your computer and copy the address of the first src file (This should look something like C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
-3. open your terminal/command prompt and give the command cd + the addres for your root file (Should look like cd C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
-4. 
+3. open your terminal/command prompt and give the command cd + the addres for your root file (Should look something like cd C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
+4. To run the test type __mvn test__ into the command prompt or __mvn clean test__ to clear any previously compiled classes before testing
+5. If maven, java, and your jdk are properly installed it should return something like
+   ```
+   [INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running LinearRegressionTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in LinearRegressionTest
+[INFO] Running MeanTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in MeanTest
+[INFO] Running PopulationStandardDeviationTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in PopulationStandardDeviationTest
+[INFO] Running RegressionPredictionTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in RegressionPredictionTest
+[INFO] Running SampleStandardDeviationTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in SampleStandardDeviationTest
+[INFO] Running ZScoreTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in ZScoreTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 39, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.335 s
+[INFO] Finished at: 2024-12-03T13:22:36-08:00
+[INFO] ------------------------------------------------------------------------
+   ```
 
 
 ## Reviewing Unit Test Coverage
