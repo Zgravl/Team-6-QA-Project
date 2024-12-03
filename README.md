@@ -13,5 +13,7 @@ This repository contains an overview of our team's web-based calculator project.
 
 
 ## Architecture
-#### Modules: 
-- Calculator logic
+### Modules: 
+- **Calculator logic**
+  - SampleStandardDeviation: Takes one value per line into a list and computes the sample standard deviation.
+  - PopulationStandardDeviation: Takes two or more numeric values into a list and computes the population standard deviation.
