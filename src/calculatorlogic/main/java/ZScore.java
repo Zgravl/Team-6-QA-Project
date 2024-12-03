@@ -1,5 +1,5 @@
 import java.util.List;
-package calculatorlogic;
+
 public class ZScore{
     public static double calculateZScore(List<String> input) throws IllegalArgumentException {
         // Ensure there is exactly one line of input
