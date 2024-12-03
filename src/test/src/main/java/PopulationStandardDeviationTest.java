@@ -6,6 +6,7 @@ class PopulationStandardDeviationTest {
 
     @Test
     public void PopulationStandardDeviation_ValidListOfSamples_ReturnsStandardDeviation() {
+        //preq-UNIT-TEST-3
         List<String> input = List.of("9", "6", "8", "5", "7");
         double expected = 1.4142135623730951;
 
@@ -16,6 +17,7 @@ class PopulationStandardDeviationTest {
 
     @Test
     public void PopulationStandardDeviation_ListOfAllZeros_ReturnsZero() {
+        //preq-UNIT-TEST-3
         List<String> input = List.of("0", "0", "0", "0", "0");
         double expected = 0.0;
 
@@ -26,6 +28,7 @@ class PopulationStandardDeviationTest {
 
     @Test
     public void PopulationStandardDeviation_EmptyList_ThrowsError() {
+        //preq-UNIT-TEST-3
         List<String> input = List.of();
 
         Exception exception = assertThrows(
@@ -38,6 +41,7 @@ class PopulationStandardDeviationTest {
 
     @Test
     public void PopulationStandardDeviation_ListWithOneSample_ThrowsError() {
+        //preq-UNIT-TEST-3
         List<String> input = List.of("42");
 
         Exception exception = assertThrows(
@@ -51,6 +55,7 @@ class PopulationStandardDeviationTest {
 
     @Test
     public void PopulationStandardDeviation_ListWithNonNumericValues_ThrowsError() {
+        //preq-UNIT-TEST-3
         List<String> input = List.of("5", "abc", "7");
 
         Exception exception = assertThrows(
@@ -63,6 +68,7 @@ class PopulationStandardDeviationTest {
 
     @Test
     public void PopulationStandardDeviation_ListWithSpaces_IgnoresSpaces() {
+        //preq-UNIT-TEST-3
         List<String> input = List.of(" 9 ", " ", "7", "", "6");
         double expected = 1.247219128924647;
 
