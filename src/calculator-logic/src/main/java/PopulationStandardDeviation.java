@@ -20,7 +20,7 @@ public class PopulationStandardDeviation{
 
         // Ensure there are at least two valid numeric values
         if (numbers.size() < 2) {
-            throw new IllegalArgumentException("At least two valid numeric values are required.");
+            throw new IllegalArgumentException("Input must contain at least two valid numeric values.");
         }
 
         // Calculate the mean
