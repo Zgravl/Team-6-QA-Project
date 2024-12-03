@@ -28,6 +28,21 @@ This repository contains an overview of our team's web-based calculator project.
 - **End-to-End Tests**
 
 ## Environment
-This application has only been tested in Windows 10 an Windows 11
+This application has only been tested in Windows 10 an Windows 11 but should work in Mac and linux environments
 To prepare your environment to execute this application:
-1. [Install the latest Java runtime fo ryour system.](https://www.java.com/en/download/manual.jsp)
+1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
+
+
+## Executing the Web Application
+
+
+## Executing Unit Tests
+
+
+## Reviewing Unit Test Coverage
+
+
+## Executing End-To-End Tests
+
+
+## Final Video Presentation
