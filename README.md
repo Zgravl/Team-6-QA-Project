@@ -50,7 +50,8 @@ To prepare your environment to execute this application:
 ## Executing Unit Tests
 1. Make sure that you have maven, java, as well as a jdk installed installed
 2. Open the project file on your computer and copy the address of the first src file (This should look something like C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
-3. open your terminal/command prompt and give the command cd <address for the root file>
+3. open your terminal/command prompt and give the command cd + the addres for your root file (Should look like cd C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
+4. 
 
 
 ## Reviewing Unit Test Coverage
