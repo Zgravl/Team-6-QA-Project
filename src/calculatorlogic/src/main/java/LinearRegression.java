@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+package calculatorlogic.src.main.java;
 public class LinearRegression{
     public static String calculateLinearRegression(List<String> input) throws IllegalArgumentException {
         List<Double> xValues = new ArrayList<>();

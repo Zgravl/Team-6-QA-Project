@@ -1,5 +1,5 @@
 import java.util.List;
-
+package calculatorlogic.src.main.java;
 public class RegressionPrediction {
     public static String predictYValue(List<String> input) throws IllegalArgumentException {
         // Ensure there is exactly one line of input

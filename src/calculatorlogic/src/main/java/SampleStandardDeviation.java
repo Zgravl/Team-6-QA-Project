@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
+package calculatorlogic.src.main.java;
 
 public class SampleStandardDeviation {
     public static double calculateSampleStandardDeviation(List<String> input) throws IllegalArgumentException {
