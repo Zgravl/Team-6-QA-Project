@@ -3,10 +3,8 @@ This repository contains an overview of our team's web-based calculator project.
 ## Table of Contents
 - [Architecture](#architecture)
 - [Environment](#environment)
-- [Executing the Web Application](#executing-the-web-application)
 - [Executing Unit Tests](#executing-unit-tests)
 - [Reviewing Unit Test Coverage](#reviewing-unit-test-coverage)
-- [Executing End-To-End Tests](#executing-end-to-end-tests)
 - [Final Video Presentation](#final-video-presentation)
 ### Members: Zakkary Byrd, Jonah Gardin
 
