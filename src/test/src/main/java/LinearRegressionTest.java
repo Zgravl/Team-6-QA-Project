@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class LinearRegressionTest {
     @Test
     public void LinearRegression_ValidList_ReturnsCorrectFormula() {
+        //preq-UNIT-TEST-6
         List<String> input = List.of(
                 "1.47, 52.21",
                 "1.5, 53.12",
@@ -21,6 +22,7 @@ public class LinearRegressionTest {
 
     @Test
     public void LinearRegression_EmptyInput_ThrowsError() {
+        //preq-UNIT-TEST-6
         List<String> input = List.of("");
 
         Exception exception = assertThrows(
@@ -33,6 +35,7 @@ public class LinearRegressionTest {
 
     @Test
     public void LinearRegression_AllXValuesSame_ThrowsError() {
+        //preq-UNIT-TEST-6
         List<String> input = List.of("2, 3", "2, 5", "2, 7");
 
         Exception exception = assertThrows(
@@ -45,6 +48,7 @@ public class LinearRegressionTest {
 
     @Test
     public void LinearRegression_AllYValuesSame_ReturnsHorizontalLine() {
+        //preq-UNIT-TEST-6
         List<String> input = List.of("1, 5", "2, 5", "3, 5");
         String expected = "y = 0.000000000000000x + 5.000000000000000";
 
@@ -55,6 +59,7 @@ public class LinearRegressionTest {
 
     @Test
     public void LinearRegression_AllZeroXY_ReturnsOrigin() {
+        //preq-UNIT-TEST-6
         List<String> input = List.of("0, 0", "0, 0", "0, 0");
 
         Exception exception = assertThrows(
@@ -67,6 +72,7 @@ public class LinearRegressionTest {
 
     @Test
     public void LinearRegression_InvalidXYPair_ThrowsError() {
+        //preq-UNIT-TEST-6
         List<String> input = List.of("1.5, 2.5", "abc, 3");
 
         Exception exception = assertThrows(
@@ -79,6 +85,7 @@ public class LinearRegressionTest {
 
     @Test
     public void LinearRegression_SingleXYPair_ThrowsError() {
+        //preq-UNIT-TEST-6
         List<String> input = List.of("1.5, 2.5");
 
         Exception exception = assertThrows(
@@ -91,6 +98,7 @@ public class LinearRegressionTest {
 
     @Test
     public void computeLinearRegression_ExtraSpacesInInput_ReturnsCorrectFormula() {
+        //preq-UNIT-TEST-6
         List<String> input = List.of("1.47,52.21", "1.5,53.12");
         String expected = "y = 30.333333333333194x + 7.620000000000211";
 
@@ -101,6 +109,7 @@ public class LinearRegressionTest {
 
     @Test
     public void LinearRegression_MixedValidAndInvalidPairs_ThrowsError() {
+        //preq-UNIT-TEST-6
         List<String> input = List.of("1.47, 52.21", "1.5");
 
         Exception exception = assertThrows(
