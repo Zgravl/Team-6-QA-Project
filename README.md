@@ -1,14 +1,16 @@
 # KSU SWE 3643 Software Testing and Quality Assurance Semester Project: Web-Based Calculator
 This repository contains an overview of our team's web-based calculator project. This includes the logic for the calculator, the unit as well as en-to-end tests, and the web application and all documentation.
 ## Table of Contents
+- [Team Members](#team-members)
 - [Architecture](#architecture)
 - [Environment](#environment)
+- [Executing the Web Application](#executing-the-web-application)
 - [Executing Unit Tests](#executing-unit-tests)
 - [Reviewing Unit Test Coverage](#reviewing-unit-test-coverage)
+- [Executing End-To-End Tests](#executing-end-to-end-tests)
 - [Final Video Presentation](#final-video-presentation)
-### Members: Zakkary Byrd, Jonah Gardin
 
-
+### Team Members: Zakkary Byrd, Jonah Gardin
 
 ## Architecture
 
@@ -45,6 +47,9 @@ To prepare your environment to execute this application:
 2. [Install the latest version of Oracle JDK.](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
 3. [Install the latest version of Apache Maven.](https://www.geeksforgeeks.org/how-to-install-apache-maven-on-windows/)
 4. [Install the latest version of playwrite.](https://playwright.dev/java/docs/intro)
+
+
+## Executing the Web Application 
 
 
 ## Executing Unit Tests
@@ -84,8 +89,10 @@ To prepare your environment to execute this application:
 ```
 
 ## Reviewing Unit Test Coverage
-
+The tests for each class achieve a 100% covereage on all statements and paths
 <image src="README.assets/image_13251241.PNG">
+
+## Executing End-To-End Tests
 
 
 ## Final Video Presentation
