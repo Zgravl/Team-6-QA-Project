@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 class ZScoreTest {
-package calculator-logic;
+import calculator-logic.src.main.java;
     @Test
     public void ZScore_ValidParameters_ReturnsCorrectZScore() {
         List<String> input = List.of("11.5, 7, 1.5811388300841898");
