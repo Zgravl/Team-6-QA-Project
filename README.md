@@ -53,7 +53,8 @@ To prepare your environment to execute this application:
 3. open your terminal/command prompt and give the command cd + the addres for your root file (Should look something like cd C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
 4. To run the test type __mvn test__ into the command prompt or __mvn clean test__ to clear any previously compiled classes before testing
 5. If maven, java, and your jdk are properly installed it should return something like
-    ```
+
+```plaintext
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
