@@ -54,7 +54,7 @@ This application has only been tested in Windows 10 an Windows 11 but should wor
 3. Inialize a Node.js project by entering into your command line __npm init -y__ to which it would return something similar to:
 ```
 {
-  "name": "zakka",
+  "name": "user",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -66,6 +66,7 @@ This application has only been tested in Windows 10 an Windows 11 but should wor
   "description": ""
 }
 ```
+4. To install playwright type into the command line __npm install playwright__
 
 ## Executing the Web Application 
 
