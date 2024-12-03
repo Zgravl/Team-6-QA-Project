@@ -6,6 +6,7 @@ public class RegressionPredictionTest {
 
     @Test
     public void RegressionPrediction_ValidParameters_ReturnsCorrectPrediction() {
+        //preq-UNIT-TEST-7
         List<String> input = List.of("1.535, 61.272186542107434, -39.061955918838656");
         String expected = "y = 54.990850423296244";
 
@@ -16,6 +17,7 @@ public class RegressionPredictionTest {
 
     @Test
     public void RegressionPrediction_MissingParameters_ThrowsError() {
+        //preq-UNIT-TEST-7
         List<String> input = List.of("1.535, 61.272186542107434");
 
         Exception exception = assertThrows(
@@ -28,6 +30,7 @@ public class RegressionPredictionTest {
 
     @Test
     public void RegressionPrediction_ExtraSpaces_ReturnsCorrectPrediction() {
+        //preq-UNIT-TEST-7
         List<String> input = List.of(" 1.535  ,  61.272186542107434  ,   -39.061955918838656 ");
         String expected = "y = 54.990850423296244";
 
@@ -38,6 +41,7 @@ public class RegressionPredictionTest {
 
     @Test
     public void RegressionPrediction_InvalidNumericValues_ThrowsError() {
+        //preq-UNIT-TEST-7
         List<String> input = List.of("1.535, abc, -39.061955918838656");
 
         Exception exception = assertThrows(
@@ -50,6 +54,7 @@ public class RegressionPredictionTest {
 
     @Test
     public void RegressionPrediction_OnlyTwoValues_ThrowsError() {
+        //preq-UNIT-TEST-7
         List<String> input = List.of("1.535, 61.272186542107434");
 
         Exception exception = assertThrows(
@@ -62,6 +67,7 @@ public class RegressionPredictionTest {
 
     @Test
     public void RegressionPrediction_MoreThanThreeValues_ThrowsError() {
+        //preq-UNIT-TEST-7
         List<String> input = List.of("1.535, 61.272186542107434, -39.061955918838656, 42.0");
 
         Exception exception = assertThrows(
@@ -74,6 +80,7 @@ public class RegressionPredictionTest {
 
     @Test
     public void RegressionPrediction_EmptyInput_ThrowsError() {
+        //preq-UNIT-TEST-7
         List<String> input = List.of("");
 
         Exception exception = assertThrows(
@@ -86,6 +93,7 @@ public class RegressionPredictionTest {
 
     @Test
     public void RegressionPrediction_MultipleLines_ThrowsError() {
+        //preq-UNIT-TEST-7
         List<String> input = List.of("1.535, 61.272186542107434, -39.061955918838656", "2.0, 50.0, 10.0");
 
         Exception exception = assertThrows(
