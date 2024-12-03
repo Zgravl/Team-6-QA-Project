@@ -1,8 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
-import calculatorlogic.PopulationStandardDeviation;
-package tests;
+package calculatorlogic;
 class PopulationStandardDeviationTest {
 
     @Test

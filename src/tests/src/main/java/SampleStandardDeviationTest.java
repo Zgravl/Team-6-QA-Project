@@ -1,8 +1,7 @@
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
-import calculatorlogic.SampleStandardDeviation;
-package tests;
+package calculatorlogic;
 class SampleStandardDeviationTest {
 
     @Test
