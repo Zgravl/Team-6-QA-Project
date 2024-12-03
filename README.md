@@ -41,7 +41,7 @@ This repository contains an overview of our team's web-based calculator project.
 
 
 ## Environment
-This application has only been tested in Windows 10 an Windows 11 but should work in Mac and linux environments
+This application has only been tested in Windows 10 an Windows 11 but should work in Mac and linux environments<br>
 [To prepare your environment to execute this application]:
 1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
 2. [Install the latest version of Oracle JDK.](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
