@@ -6,6 +6,7 @@ class MeanTest {
 
     @Test
     public void Mean_ValidListOfNumbers_ReturnsMean() {
+        //preq-UNIT-TEST-4
         List<String> input = List.of("9", "6", "8", "5", "7");
         double expected = 7.0;
 
@@ -16,6 +17,7 @@ class MeanTest {
 
     @Test
     public void Mean_EmptyList_ThrowsError() {
+        //preq-UNIT-TEST-4
         List<String> input = List.of();
 
         Exception exception = assertThrows(
@@ -28,6 +30,7 @@ class MeanTest {
 
     @Test
     public void Mean_ListWithNonNumericValues_ThrowsError() {
+        //preq-UNIT-TEST-4
         List<String> input = List.of("5", "abc", "7");
 
         Exception exception = assertThrows(
@@ -40,6 +43,7 @@ class MeanTest {
 
     @Test
     public void Mean_ListWithSpaces_IgnoresSpacesAndComputesMean() {
+        //preq-UNIT-TEST-4
         List<String> input = List.of(" 9 ", " ", "7", "", "6");
         double expected = 7.333333333333333;
 
