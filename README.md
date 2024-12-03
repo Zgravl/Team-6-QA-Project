@@ -11,6 +11,20 @@ This repository contains an overview of our team's web-based calculator project.
 
 
 ## Architecture
+
+- Core Calculator Logic Module
+    - This module contains the core computational functionality.
+    - It is implemented in java, separate form the web server or user interface.
+    - Responsibility : Accept inputs, perform calculations, and return results.
+- Unit Test Module
+    - The Unit tests ensure that the logic in the Calculator works as expected, independently of the web server or user interface.
+    - This module is crucial for identifying and fixing bugs early in the development process.
+    - Responsibility: Validate each method's correctness under normal, edge, and error conditions.
+- Relationships
+    - Unit tests provide inputs to the methods and verify that the outputs match expected values.
+    - Unit tests simulate edge cases to (e.g., dividing by zero) to ensure that the logic handles these correctly.
+    - Unit tests also act as a regression preventer, making sure that new changes don't break exisiting functionality.
+  
 ### Modules: 
 - **Calculator logic**
   - SampleStandardDeviation: Takes a list of one or more numeric values (one per line) and computes the sample standard deviation.
