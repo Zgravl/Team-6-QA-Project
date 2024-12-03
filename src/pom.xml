@@ -9,7 +9,7 @@
 
     <modules>
         <module>calculatorlogic</module>
-        <module>unittests</module>
+        <module>test</module>
     </modules>
 
     <dependencyManagement>
