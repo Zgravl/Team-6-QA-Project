@@ -6,6 +6,7 @@ class SampleStandardDeviationTest {
 
     @Test
     public void SampleStandardDeviation_ValidListOfSamples_ReturnsStandardDeviation() {
+        //preq-UNIT-TEST-2
         List<String> input = List.of("9", "6", "8", "5", "7");
         double expected = 1.5811388300841898;
 
@@ -16,6 +17,7 @@ class SampleStandardDeviationTest {
 
     @Test
     public void SampleStandardDeviation_ListOfAllZeros_ReturnsZero() {
+        //preq-UNIT-TEST-2
         List<String> input = List.of("0", "0", "0", "0", "0");
         double expected = 0.0;
 
@@ -26,6 +28,7 @@ class SampleStandardDeviationTest {
 
     @Test
     public void SampleStandardDeviation_EmptyList_ThrowsError() {
+        //preq-UNIT-TEST-2
         List<String> input = List.of();
 
         Exception exception = assertThrows(
@@ -39,7 +42,7 @@ class SampleStandardDeviationTest {
 
     @Test
     public void SampleStandardDeviation_ListWithNonNumericValues_ThrowsError() {
-        // Arrange
+        //preq-UNIT-TEST-2
         List<String> input = List.of("5", "abc", "7");
 
         Exception exception = assertThrows(
@@ -52,7 +55,7 @@ class SampleStandardDeviationTest {
 
     @Test
     public void SampleStandardDeviation_ListWithSpaces_IgnoresSpaces() {
-        // Arrange
+        //preq-UNIT-TEST-2
         List<String> input = List.of(" 9 ", " ", "7", "", "6");
         double expected = 1.5275252316519468;
 
