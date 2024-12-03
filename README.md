@@ -8,7 +8,7 @@ This repository contains an overview of our team's web-based calculator project.
 - [Reviewing Unit Test Coverage](#reviewing-unit-test-coverage)
 - [Executing End-To-End Tests](#executing-end-to-end-tests)
 - [Final Video Presentation](#final-video-presentation)
-## Members: Zakkary Byrd, Jonah Gardin
+### Members: Zakkary Byrd, Jonah Gardin
 
 ## Architecture
 
