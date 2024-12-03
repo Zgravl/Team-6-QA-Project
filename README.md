@@ -21,6 +21,10 @@ This repository contains an overview of our team's web-based calculator project.
   - ZScore: Takes a list of three numeric values (three values seperated by commas on one line) and computes the ZScore
   - LinearRegression: Takes a list of two or more x,y number pairs (only one pair per line) and computes the Single Linear Regression
   - RegressionPrediction: Takes a list of three numeric values (three values seperated by commas on one line) and predicts Y from the linear regression formula
- 
-- **Unit Tests
-  - 
+- **Unit Tests**
+  - each logic module has a corresponding test module which tests all lines of logic and error handling
+  - each unit test has 100% coverage for their corresponding logic module
+- **Web Server**
+- **End-to-End Tests**
+
+## Environment
