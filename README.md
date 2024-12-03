@@ -46,7 +46,6 @@ This application has only been tested in Windows 10 an Windows 11 but should wor
 1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
 2. [Install the latest version of Oracle JDK.](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
 3. [Install the latest version of Apache Maven.](https://www.geeksforgeeks.org/how-to-install-apache-maven-on-windows/)
-4. [Install the latest version of playwrite.](https://playwright.dev/java/docs/intro)
 
 [Setting up Playwright for End-To-End testing]
 1. [Intall Node.js](https://nodejs.org/en)
