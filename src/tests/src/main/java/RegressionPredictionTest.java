@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 import calculatorlogic.RegressionPrediction;
+package tests;
 public class RegressionPredictionTest {
 
     @Test

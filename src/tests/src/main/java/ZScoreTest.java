@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 import calculatorlogic.ZScore;
+package tests;
 class ZScoreTest {
     @Test
     public void ZScore_ValidParameters_ReturnsCorrectZScore() {
