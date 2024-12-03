@@ -15,7 +15,7 @@ class SampleStandardDeviationTest {
     }
 
     @Test
-    public void eSampleStandardDeviation_ListOfAllZeros_ReturnsZero() {
+    public void SampleStandardDeviation_ListOfAllZeros_ReturnsZero() {
         List<String> input = List.of("0", "0", "0", "0", "0");
         double expected = 0.0;
 
@@ -38,7 +38,7 @@ class SampleStandardDeviationTest {
 
 
     @Test
-    public void ampleStandardDeviation_ListWithNonNumericValues_ThrowsError() {
+    public void SampleStandardDeviation_ListWithNonNumericValues_ThrowsError() {
         // Arrange
         List<String> input = List.of("5", "abc", "7");
 
