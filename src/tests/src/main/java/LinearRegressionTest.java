@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
-import calculatorlogic.src.main.java;
+import calculatorlogic.LinearRegression;
 
 public class LinearRegressionTest {
     @Test
