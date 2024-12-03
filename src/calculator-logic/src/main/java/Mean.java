@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mean{
+public class Mean {
     public static double calculateMean(List<String> input) throws IllegalArgumentException {
         List<Double> numbers = new ArrayList<>();
 
@@ -20,7 +20,7 @@ public class Mean{
 
         // Ensure there's at least one valid numeric value
         if (numbers.isEmpty()) {
-            throw new IllegalArgumentException("No valid numeric values provided.");
+            throw new IllegalArgumentException("Input must contain at least one valid numeric value.");
         }
 
         // Calculate the mean
@@ -30,3 +30,4 @@ public class Mean{
         }
         return sum / numbers.size();
     }
+}

@@ -5,7 +5,7 @@ public class RegressionPrediction {
     public static String predictYValue(List<String> input) throws IllegalArgumentException {
         // Ensure there is exactly one line of input
         if (input.size() != 1) {
-            throw new IllegalArgumentException("Input must contain exactly one line.");
+            throw new IllegalArgumentException("Input must contain exactly one line with three numeric values separated by commas.");
         }
 
         String line = input.get(0).trim();

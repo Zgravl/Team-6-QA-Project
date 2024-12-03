@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LinearRegression{
-    public static String computeLinearRegression(List<String> input) throws IllegalArgumentException {
+    public static String calculateLinearRegression(List<String> input) throws IllegalArgumentException {
         List<Double> xValues = new ArrayList<>();
         List<Double> yValues = new ArrayList<>();
 
