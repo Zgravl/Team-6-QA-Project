@@ -24,16 +24,13 @@ This repository contains an overview of our team's web-based calculator project.
 - **Unit Tests**
   - each logic module has a corresponding test module which tests all lines of logic and error handling
   - each unit test has 100% coverage for their corresponding logic module
-- **Web Server**
-- **End-to-End Tests**
+
 
 ## Environment
 This application has only been tested in Windows 10 an Windows 11 but should work in Mac and linux environments
 To prepare your environment to execute this application:
 1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
 
-
-## Executing the Web Application
 
 
 ## Executing Unit Tests
@@ -42,8 +39,6 @@ To prepare your environment to execute this application:
 ## Reviewing Unit Test Coverage
 
 <image src="README.assets/image_13251241.PNG">
-
-## Executing End-To-End Tests
 
 
 ## Final Video Presentation
