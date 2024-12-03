@@ -1,91 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f4f4f9;
-    }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
 
-    .calculator-container {
-      max-width: 600px;
-      width: 100%;
-      padding: 20px;
-    }
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f9;
+        }
 
-    .result-box-default {
-      background-color: #FFECD7;
-      color: #000000;
-    }
-    .result-box-error {
-      background-color: #B70F0A;
-      color: #FFFFFF;
-    }
 
-    button {
-      background-color: #EBEBEB;
-      color: #000000;
-      border: 2px solid #000000;
-      border-radius: 5px;
-    }
+        .calculator-container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+        }
 
-    .input-box {
-      border: 2px solid #000000;
-      border-radius: 5px;
-      padding: 10px;
-      width: 100%;
-    }
 
-    .header {
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-  </style>
+        .result-box-default {
+            background-color: #FFECD7;
+            color: #000000;
+        }
+        .result-box-error {
+            background-color: #B70F0A;
+            color: #FFFFFF;
+        }
+
+
+        button {
+            background-color: #EBEBEB;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 5px;
+        }
+
+
+        .input-box {
+            border: 2px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+        }
+
+
+        .header {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 <div class="calculator-container">
-    <!-- Title and Clear Button -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="m-0">Calculator</h1>
-        <button class="btn" style="border: 2px solid #000000; border-radius: 5px; padding: 10px; width: 300px;" onclick="clearCalculator()">Clear</button>
-    </div>
+  <!-- Title and Clear Button -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="m-0">Calculator</h1>
+    <button class="btn" style="border: 2px solid #000000; border-radius: 5px; padding: 10px; width: 300px;" onclick="clearCalculator()">Clear</button>
+  </div>
 
-    <div id="resultBox" class="p-3 rounded result-box-default text-center mb-4" style="font-weight: bold;">
-        Enter values below and select an operation.
-    </div>
 
-    <div class="mb-4">
-        <div class="header">Values</div>
-        <textarea id="valuesInput" class="form-control input-box" rows="5"></textarea>
-    </div>
+  <div id="resultBox" class="p-3 rounded result-box-default text-center mb-4" style="font-weight: bold;">
+    Enter values below and select an operation.
+  </div>
 
-    <div class="mb-4">
-        <div class="header">Descriptive Statistics</div>
-        <button class="w-100 mb-2" onclick="handleError('+')">Compute Mean | one value per line</button>
-        <button class="w-100 mb-2" onclick="handleError('/')">Divide (test error handling)</button>
-    </div>
+
+  <div class="mb-4">
+    <div class="header">Values</div>
+    <textarea id="valuesInput" class="form-control input-box" rows="5" ></textarea>
+  </div>
+
+
+  <div class="mb-4">
+    <div class="header">Descriptive Statistics</div>
+    <button class="w-100 mb-2">Compute Sample Standard Deviation | one value per line</button>
+    <button class="w-100 mb-2">Compute Population Standard Deviation | one value per line</button>
+    <button class="w-100 mb-2">Compute Mean | one value per line</button>
+    <button class="w-100 mb-2">Compute Z Score | value, mean, stdDev on one line</button>
+  </div>
+
+
+  <div class="mb-4">
+    <div class="header">Single Linear Regression</div>
+    <button class="w-100 mb-2">Compute Single Linear Regression Formula | one x,y pair per line</button>
+    <button class="w-100">Predict Y from Linear Regression Formula | x, m, b on one line</button>
+  </div>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  function clearCalculator() {
-    document.getElementById('resultBox').innerText = "Enter values, select an operation, or analyze data.";
-    document.getElementById('resultBox').className = "p-3 rounded result-box-default text-center mb-4";
-    document.getElementById('valuesInput').value = "";
-  }
 
-  function displayError(message) {
+        function clearCalculator() {
+            document.getElementById('resultBox').innerText = "Enter values, select an operation, or analyze data.";
+            document.getElementById('resultBox').className = "p-3 rounded result-box-default text-center mb-4";
+            document.getElementById('valuesInput').value = "";
+        }
+         function displayError(message) {
     const resultBox = document.getElementById('resultBox');
     resultBox.innerText = message;
     resultBox.className = "p-3 rounded result-box-error text-center mb-4";
@@ -116,8 +135,6 @@
       displayError(`${values[0]} / ${values[1]} =<br>Not a Number`);
       return;
     }
-
-  }
-</script>
+    </script>
 </body>
 </html>
