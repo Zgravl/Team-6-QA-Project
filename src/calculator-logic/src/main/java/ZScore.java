@@ -1,4 +1,5 @@
 import java.util.List;
+package tests;
 
 public class ZScore{
     public static double calculateZScore(List<String> input) throws IllegalArgumentException {

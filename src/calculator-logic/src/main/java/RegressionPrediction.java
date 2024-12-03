@@ -1,5 +1,5 @@
 import java.util.List;
-
+package tests;
 
 public class RegressionPrediction {
     public static String predictYValue(List<String> input) throws IllegalArgumentException {
