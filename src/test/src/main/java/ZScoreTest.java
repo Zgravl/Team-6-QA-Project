@@ -5,6 +5,7 @@ import java.util.List;
 class ZScoreTest {
     @Test
     public void ZScore_ValidParameters_ReturnsCorrectZScore() {
+        //preq-UNIT-TEST-5
         List<String> input = List.of("11.5, 7, 1.5811388300841898");
         double expected = 2.846049894151541;
 
@@ -15,6 +16,7 @@ class ZScoreTest {
 
     @Test
     public void ZScore_MissingOneParameter_ThrowsError() {
+        //preq-UNIT-TEST-5
         List<String> input = List.of("11.5, 7");
 
         Exception exception = assertThrows(
@@ -27,6 +29,7 @@ class ZScoreTest {
 
     @Test
     public void ZScore_ExtraParameters_ThrowsError() {
+        //preq-UNIT-TEST-5
         List<String> input = List.of("11.5, 7, 1.5811388300841898, 3");
 
         Exception exception = assertThrows(
@@ -39,6 +42,7 @@ class ZScoreTest {
 
     @Test
     public void ZScore_EmptyInput_ThrowsError() {
+        //preq-UNIT-TEST-5
         List<String> input = List.of("");
 
         Exception exception = assertThrows(
@@ -51,6 +55,7 @@ class ZScoreTest {
 
     @Test
     public void ZScore_NonNumericInput_ThrowsError() {
+        //preq-UNIT-TEST-5
         List<String> input = List.of("11.5, abc, 1.5811388300841898");
 
         Exception exception = assertThrows(
@@ -63,6 +68,7 @@ class ZScoreTest {
 
     @Test
     public void ZScore_StandardDeviationIsZero_ThrowsError() {
+        //preq-UNIT-TEST-5
         List<String> input = List.of("11.5, 7, 0");
 
         Exception exception = assertThrows(
@@ -75,6 +81,7 @@ class ZScoreTest {
 
     @Test
     public void ZScore_MultipleLines_ThrowsError() {
+        //preq-UNIT-TEST-5
         List<String> input = List.of("11.5, 7, 1.5811388300841898","5, 2, 1");
 
         Exception exception = assertThrows(
