@@ -42,6 +42,7 @@ To prepare your environment to execute this application:
 ## Reviewing Unit Test Coverage
 
 <image src="README.assets/image_13251241.PNG">
+
 ## Executing End-To-End Tests
 
 
