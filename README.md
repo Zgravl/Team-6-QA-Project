@@ -15,5 +15,12 @@ This repository contains an overview of our team's web-based calculator project.
 ## Architecture
 ### Modules: 
 - **Calculator logic**
-  - SampleStandardDeviation: Takes one value per line into a list and computes the sample standard deviation.
-  - PopulationStandardDeviation: Takes two or more numeric values into a list and computes the population standard deviation.
+  - SampleStandardDeviation: Takes a list of one or more numeric values (one per line) and computes the sample standard deviation.
+  - PopulationStandardDeviation: Takes a list of two or more numeric values (one per line) and computes the population standard deviation.
+  - Mean: Takes a list of one or more numeric values (one per line) and computes the mean
+  - ZScore: Takes a list of three numeric values (three values seperated by commas on one line) and computes the ZScore
+  - LinearRegression: Takes a list of two or more x,y number pairs (only one pair per line) and computes the Single Linear Regression
+  - RegressionPrediction: Takes a list of three numeric values (three values seperated by commas on one line) and predicts Y from the linear regression formula
+ 
+- **Unit Tests
+  - 
