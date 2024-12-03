@@ -10,5 +10,8 @@ This repository contains an overview of our team's web-based calculator project.
 - [Final Video Presentation](#final-video-presentation)
 ### Members: Zakkary Byrd, Jonah Gardin
 
-## Architecture
 
+
+## Architecture(#architecture)
+#### Modules: 
+- Calculator logic
