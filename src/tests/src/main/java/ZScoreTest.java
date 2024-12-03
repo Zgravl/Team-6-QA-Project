@@ -4,24 +4,19 @@ import java.util.List;
 class ZScoreTest {
 
     @Test
-    public void computeZScore_ValidParameters_ReturnsCorrectZScore() {
-        // Arrange
+    public void ZScore_ValidParameters_ReturnsCorrectZScore() {
         List<String> input = List.of("11.5, 7, 1.5811388300841898");
         double expected = 2.846049894151541;
 
-        // Act
         double result = ZScore.calculateZScore(input);
 
-        // Assert
         assertEquals(expected, result, 1e-9, "The computed z-score should match the expected value.");
     }
 
     @Test
-    public void computeZScore_MissingOneParameter_ThrowsError() {
-        // Arrange
+    public void ZScore_MissingOneParameter_ThrowsError() {
         List<String> input = List.of("11.5, 7");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> ZScore.calculateZScore(input),
@@ -31,11 +26,9 @@ class ZScoreTest {
     }
 
     @Test
-    public void computeZScore_ExtraParameters_ThrowsError() {
-        // Arrange
+    public void ZScore_ExtraParameters_ThrowsError() {
         List<String> input = List.of("11.5, 7, 1.5811388300841898, 3");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> ZScore.calculateZScore(input),
@@ -45,11 +38,9 @@ class ZScoreTest {
     }
 
     @Test
-    public void computeZScore_EmptyInput_ThrowsError() {
-        // Arrange
+    public void ZScore_EmptyInput_ThrowsError() {
         List<String> input = List.of("");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> ZScore.calculateZScore(input),
@@ -59,11 +50,9 @@ class ZScoreTest {
     }
 
     @Test
-    public void computeZScore_NonNumericInput_ThrowsError() {
-        // Arrange
+    public void ZScore_NonNumericInput_ThrowsError() {
         List<String> input = List.of("11.5, abc, 1.5811388300841898");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> ZScore.calculateZScore(input),
@@ -73,11 +62,9 @@ class ZScoreTest {
     }
 
     @Test
-    public void computeZScore_StandardDeviationIsZero_ThrowsError() {
-        // Arrange
+    public void ZScore_StandardDeviationIsZero_ThrowsError() {
         List<String> input = List.of("11.5, 7, 0");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> ZScore.calculateZScore(input),
@@ -87,11 +74,9 @@ class ZScoreTest {
     }
 
     @Test
-    public void computeZScore_MultipleLines_ThrowsError() {
-        // Arrange
+    public void ZScore_MultipleLines_ThrowsError() {
         List<String> input = List.of("11.5, 7, 1.5811388300841898","5, 2, 1");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> ZScore.calculateZScore(input),

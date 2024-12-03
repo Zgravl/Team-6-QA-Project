@@ -4,37 +4,29 @@ import java.util.List;
 class PopulationStandardDeviationTest {
 
     @Test
-    public void computePopulationStandardDeviation_ValidListOfSamples_ReturnsStandardDeviation() {
-        // Arrange
+    public void PopulationStandardDeviation_ValidListOfSamples_ReturnsStandardDeviation() {
         List<String> input = List.of("9", "6", "8", "5", "7");
         double expected = 1.4142135623730951;
 
-        // Act
         double result = PopulationStandardDeviation.calculatePopulationStandardDeviation(input);
 
-        // Assert
         assertEquals(expected, result, 1e-9, "The computed population standard deviation should match the expected value.");
     }
 
     @Test
-    public void computePopulationStandardDeviation_ListOfAllZeros_ReturnsZero() {
-        // Arrange
+    public void PopulationStandardDeviation_ListOfAllZeros_ReturnsZero() {
         List<String> input = List.of("0", "0", "0", "0", "0");
         double expected = 0.0;
 
-        // Act
         double result = PopulationStandardDeviation.calculatePopulationStandardDeviation(input);
 
-        // Assert
         assertEquals(expected, result, 1e-9, "The computed population standard deviation of all zeros should be zero.");
     }
 
     @Test
-    public void computePopulationStandardDeviation_EmptyList_ThrowsError() {
-        // Arrange
+    public void PopulationStandardDeviation_EmptyList_ThrowsError() {
         List<String> input = List.of();
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> PopulationStandardDeviation.calculatePopulationStandardDeviation(input),
@@ -44,11 +36,9 @@ class PopulationStandardDeviationTest {
     }
 
     @Test
-    public void computePopulationStandardDeviation_ListWithOneSample_ThrowsError() {
-        // Arrange
+    public void PopulationStandardDeviation_ListWithOneSample_ThrowsError() {
         List<String> input = List.of("42");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> PopulationStandardDeviation.calculatePopulationStandardDeviation(input),
@@ -59,11 +49,9 @@ class PopulationStandardDeviationTest {
 
 
     @Test
-    public void computePopulationStandardDeviation_ListWithNonNumericValues_ThrowsError() {
-        // Arrange
+    public void PopulationStandardDeviation_ListWithNonNumericValues_ThrowsError() {
         List<String> input = List.of("5", "abc", "7");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> PopulationStandardDeviation.calculatePopulationStandardDeviation(input),
@@ -73,15 +61,12 @@ class PopulationStandardDeviationTest {
     }
 
     @Test
-    public void computePopulationStandardDeviation_ListWithSpacesAndEmptyLines_IgnoresSpacesAndComputesStandardDeviation() {
-        // Arrange
+    public void PopulationStandardDeviation_ListWithSpaces_IgnoresSpaces() {
         List<String> input = List.of(" 9 ", " ", "7", "", "6");
         double expected = 1.247219128924647;
 
-        // Act
         double result = PopulationStandardDeviation.calculatePopulationStandardDeviation(input);
 
-        // Assert
         assertEquals(expected, result, 1e-9, "The computed population standard deviation should ignore empty lines and spaces.");
     }
 }

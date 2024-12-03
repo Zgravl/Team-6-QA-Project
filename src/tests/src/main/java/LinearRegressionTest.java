@@ -6,8 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LinearRegressionTest {
     @Test
-    public void computeLinearRegression_ValidListOfXY_ReturnsCorrectFormula() {
-        // Arrange
+    public void LinearRegression_ValidList_ReturnsCorrectFormula() {
         List<String> input = List.of(
                 "1.47, 52.21",
                 "1.5, 53.12",
@@ -16,19 +15,15 @@ public class LinearRegressionTest {
                 "1.57, 57.2");
         String expected = "y = 50.414012738853500x + -22.160127388535017";
 
-        // Act
         String result = LinearRegression.calculateLinearRegression(input);
 
-        // Assert
         assertEquals(expected, result, "The computed regression formula should match the expected value.");
     }
 
     @Test
-    public void computeLinearRegression_EmptyInput_ThrowsError() {
-        // Arrange
+    public void LinearRegression_EmptyInput_ThrowsError() {
         List<String> input = List.of("");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> LinearRegression.calculateLinearRegression(input),
@@ -38,11 +33,9 @@ public class LinearRegressionTest {
     }
 
     @Test
-    public void computeLinearRegression_AllXValuesSame_ThrowsError() {
-        // Arrange
+    public void LinearRegression_AllXValuesSame_ThrowsError() {
         List<String> input = List.of("2, 3", "2, 5", "2, 7");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> LinearRegression.calculateLinearRegression(input),
@@ -52,24 +45,19 @@ public class LinearRegressionTest {
     }
 
     @Test
-    public void computeLinearRegression_AllYValuesSame_ReturnsHorizontalLine() {
-        // Arrange
+    public void LinearRegression_AllYValuesSame_ReturnsHorizontalLine() {
         List<String> input = List.of("1, 5", "2, 5", "3, 5");
         String expected = "y = 0.000000000000000x + 5.000000000000000";
 
-        // Act
         String result = LinearRegression.calculateLinearRegression(input);
 
-        // Assert
         assertEquals(expected, result, "When all Y values are the same, the regression should return a horizontal line.");
     }
 
     @Test
-    public void computeLinearRegression_AllZeroXY_ReturnsOrigin() {
-        // Arrange
+    public void LinearRegression_AllZeroXY_ReturnsOrigin() {
         List<String> input = List.of("0, 0", "0, 0", "0, 0");
 
-        // Act
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> LinearRegression.calculateLinearRegression(input),
@@ -79,11 +67,9 @@ public class LinearRegressionTest {
     }
 
     @Test
-    public void computeLinearRegression_InvalidXYPair_ThrowsError() {
-        // Arrange
+    public void LinearRegression_InvalidXYPair_ThrowsError() {
         List<String> input = List.of("1.5, 2.5", "abc, 3");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> LinearRegression.calculateLinearRegression(input),
@@ -93,11 +79,9 @@ public class LinearRegressionTest {
     }
 
     @Test
-    public void computeLinearRegression_SingleXYPair_ThrowsError() {
-        // Arrange
+    public void LinearRegression_SingleXYPair_ThrowsError() {
         List<String> input = List.of("1.5, 2.5");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> LinearRegression.calculateLinearRegression(input),
@@ -107,24 +91,19 @@ public class LinearRegressionTest {
     }
 
     @Test
-    public void computeLinearRegression_ExtraSpacesInInput_HandlesCorrectly() {
-        // Arrange
+    public void computeLinearRegression_ExtraSpacesInInput_ReturnsCorrectFormula() {
         List<String> input = List.of("1.47,52.21", "1.5,53.12");
         String expected = "y = 30.333333333333194x + 7.620000000000211";
 
-        // Act
         String result = LinearRegression.calculateLinearRegression(input);
 
-        // Assert
         assertEquals(expected, result, "Extra spaces in input should be handled correctly.");
     }
 
     @Test
-    public void computeLinearRegression_MixedValidAndInvalidPairs_ThrowsError() {
-        // Arrange
+    public void LinearRegression_MixedValidAndInvalidPairs_ThrowsError() {
         List<String> input = List.of("1.47, 52.21", "1.5");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> LinearRegression.calculateLinearRegression(input),

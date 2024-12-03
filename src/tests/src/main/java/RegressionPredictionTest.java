@@ -5,24 +5,19 @@ import java.util.List;
 public class RegressionPredictionTest {
 
     @Test
-    public void computeRegressionPrediction_ValidParameters_ReturnsCorrectPrediction() {
-        // Arrange
+    public void RegressionPrediction_ValidParameters_ReturnsCorrectPrediction() {
         List<String> input = List.of("1.535, 61.272186542107434, -39.061955918838656");
         String expected = "y = 54.990850423296244";
 
-        // Act
         String result = RegressionPrediction.predictYValue(input);
 
-        // Assert
         assertEquals(expected, result, "The regression prediction should match the expected value.");
     }
 
     @Test
-    public void computeRegressionPrediction_MissingParameters_ThrowsError() {
-        // Arrange
+    public void RegressionPrediction_MissingParameters_ThrowsError() {
         List<String> input = List.of("1.535, 61.272186542107434");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> RegressionPrediction.predictYValue(input),
@@ -32,24 +27,19 @@ public class RegressionPredictionTest {
     }
 
     @Test
-    public void computeRegressionPrediction_ExtraSpacesInInput_ReturnsCorrectPrediction() {
-        // Arrange
+    public void RegressionPrediction_ExtraSpaces_ReturnsCorrectPrediction() {
         List<String> input = List.of(" 1.535  ,  61.272186542107434  ,   -39.061955918838656 ");
         String expected = "y = 54.990850423296244";
 
-        // Act
         String result = RegressionPrediction.predictYValue(input);
 
-        // Assert
         assertEquals(expected, result, "Extra spaces in the input should not affect the prediction calculation.");
     }
 
     @Test
-    public void computeRegressionPrediction_InvalidNumericValues_ThrowsError() {
-        // Arrange
+    public void RegressionPrediction_InvalidNumericValues_ThrowsError() {
         List<String> input = List.of("1.535, abc, -39.061955918838656");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> RegressionPrediction.predictYValue(input),
@@ -59,11 +49,9 @@ public class RegressionPredictionTest {
     }
 
     @Test
-    public void computeRegressionPrediction_OnlyTwoValuesProvided_ThrowsError() {
-        // Arrange
+    public void RegressionPrediction_OnlyTwoValues_ThrowsError() {
         List<String> input = List.of("1.535, 61.272186542107434");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> RegressionPrediction.predictYValue(input),
@@ -73,11 +61,9 @@ public class RegressionPredictionTest {
     }
 
     @Test
-    public void computeRegressionPrediction_MoreThanThreeValues_ThrowsError() {
-        // Arrange
+    public void RegressionPrediction_MoreThanThreeValues_ThrowsError() {
         List<String> input = List.of("1.535, 61.272186542107434, -39.061955918838656, 42.0");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> RegressionPrediction.predictYValue(input),
@@ -87,11 +73,9 @@ public class RegressionPredictionTest {
     }
 
     @Test
-    public void computeRegressionPrediction_EmptyInput_ThrowsError() {
-        // Arrange
+    public void RegressionPrediction_EmptyInput_ThrowsError() {
         List<String> input = List.of("");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> RegressionPrediction.predictYValue(input),
@@ -101,11 +85,9 @@ public class RegressionPredictionTest {
     }
 
     @Test
-    public void computeRegressionPrediction_InputWithMultipleLines_ThrowsError() {
-        // Arrange
+    public void RegressionPrediction_MultipleLines_ThrowsError() {
         List<String> input = List.of("1.535, 61.272186542107434, -39.061955918838656", "2.0, 50.0, 10.0");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> RegressionPrediction.predictYValue(input),

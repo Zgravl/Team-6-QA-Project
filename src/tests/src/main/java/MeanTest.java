@@ -5,24 +5,19 @@ import java.util.List;
 class MeanTest {
 
     @Test
-    public void computeMean_ValidListOfNumbers_ReturnsMean() {
-        // Arrange
+    public void Mean_ValidListOfNumbers_ReturnsMean() {
         List<String> input = List.of("9", "6", "8", "5", "7");
         double expected = 7.0;
 
-        // Act
         double result = Mean.calculateMean(input);
 
-        // Assert
         assertEquals(expected, result, 1e-9, "The computed mean should match the expected value.");
     }
 
     @Test
-    public void computeMean_EmptyList_ThrowsError() {
-        // Arrange
+    public void Mean_EmptyList_ThrowsError() {
         List<String> input = List.of();
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> Mean.calculateMean(input),
@@ -32,11 +27,9 @@ class MeanTest {
     }
 
     @Test
-    public void computeMean_ListWithNonNumericValues_ThrowsError() {
-        // Arrange
+    public void Mean_ListWithNonNumericValues_ThrowsError() {
         List<String> input = List.of("5", "abc", "7");
 
-        // Act and Assert
         Exception exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> Mean.calculateMean(input),
@@ -46,15 +39,12 @@ class MeanTest {
     }
 
     @Test
-    public void computeMean_ListWithSpacesAndEmptyLines_IgnoresSpacesAndComputesMean() {
-        // Arrange
+    public void Mean_ListWithSpaces_IgnoresSpacesAndComputesMean() {
         List<String> input = List.of(" 9 ", " ", "7", "", "6");
         double expected = 7.333333333333333;
 
-        // Act
         double result = Mean.calculateMean(input);
 
-        // Assert
         assertEquals(expected, result, 1e-9, "The computed mean should ignore empty lines and spaces.");
     }
 }
