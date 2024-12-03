@@ -28,3 +28,6 @@ This repository contains an overview of our team's web-based calculator project.
 - **End-to-End Tests**
 
 ## Environment
+This application has only been tested in Windows 10 an Windows 11
+To prepare your environment to execute this application:
+1. [Install the latest Java runtime fo ryour system.](https://www.java.com/en/download/manual.jsp)
