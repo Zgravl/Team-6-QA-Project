@@ -41,7 +41,7 @@ class SampleStandardDeviationTest {
                 () -> SampleStandardDeviation.calculateSampleStandardDeviation(input),
                 "An empty list should throw an IllegalArgumentException."
         );
-        assertEquals("Input must contain at least one valid numeric value.", exception.getMessage());
+        assertEquals("No valid numeric values provided.", exception.getMessage());
     }
 
 

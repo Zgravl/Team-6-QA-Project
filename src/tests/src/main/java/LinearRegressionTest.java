@@ -9,11 +9,11 @@ public class LinearRegressionTest {
     public void computeLinearRegression_ValidListOfXY_ReturnsCorrectFormula() {
         // Arrange
         List<String> input = List.of(
-            "1.47, 52.21",
-            "1.5, 53.12",
-            "1.52, 54.48",
-            "1.55, 55.84",
-            "1.57, 57.2");
+                "1.47, 52.21",
+                "1.5, 53.12",
+                "1.52, 54.48",
+                "1.55, 55.84",
+                "1.57, 57.2");
         String expected = "y = 50.414012738853500x + -22.160127388535017";
 
         // Act
@@ -36,7 +36,7 @@ public class LinearRegressionTest {
         );
         assertEquals("There must be at least two valid X, Y pairs.", exception.getMessage());
     }
-    
+
     @Test
     public void computeLinearRegression_AllXValuesSame_ThrowsError() {
         // Arrange
