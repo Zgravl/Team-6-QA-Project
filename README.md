@@ -97,6 +97,6 @@ __Set up Maven__
 
 ## Reviewing Unit Test Coverage
 The tests for each class achieve a 100% covereage on all statements and paths
-<image src="README.assets/image_13251241.PNG">
+<image src="README.assets/Coverage Test.PNG">
 
 ## Final Video Presentation
