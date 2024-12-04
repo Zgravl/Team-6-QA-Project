@@ -4,7 +4,6 @@ This repository contains an overview of our team's web-based calculator project.
 - [Team Members](#team-members)
 - [Architecture](#architecture)
 - [Environment](#environment)
-- [Executing the Web Application](#executing-the-web-application)
 - [Executing Unit Tests](#executing-unit-tests)
 - [Reviewing Unit Test Coverage](#reviewing-unit-test-coverage)
 - [Final Video Presentation](#final-video-presentation)
