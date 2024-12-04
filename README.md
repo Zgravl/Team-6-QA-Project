@@ -44,7 +44,7 @@ This application has only been tested in Windows 10 and Windows 11 but should wo
 [To prepare your environment to execute this application]:<br>
 __Set up Java and Oracle JDK__
 1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
-2. [Install the latest version of Oracle JDK.](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
+2. [Install the latest version of Oracle JDK (x64 Installer).](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
 3. After installing the JDK, search for Environment Variables in the start menu.
 4. Under system Variables click New and set the variable name to ```JAVA_HOME``` and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK.
 5. Find the ```path``` variable under System Variable and double-click it.
