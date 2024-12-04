@@ -10,6 +10,10 @@
     <artifactId>calculatorlogic</artifactId>
 
     <dependencies>
-        <!-- Add dependencies specific to this module if any -->
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>5.3.25</version> <!-- Or a compatible version -->
+    </dependency>
     </dependencies>
 </project>
