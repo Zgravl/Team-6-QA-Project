@@ -24,6 +24,7 @@ This repository contains an overview of our team's web-based calculator project.
     - Unit tests provide inputs to the methods and verify that the outputs match expected values.
     - Unit tests simulate edge cases to (e.g., dividing by zero) to ensure that the logic handles these correctly.
     - Unit tests also act as a regression preventer, making sure that new changes don't break exisiting functionality.
+<image src="README.assets/Architecture Diagram.png">
   
 ### Modules: 
 - **Calculator logic**
