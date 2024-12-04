@@ -103,4 +103,6 @@ The tests for each class achieve a 100% coverage on all statements and paths
 ## Final Video Presentation
 <video width="100%" controls>
   <source src="README.assets/PresentationVideo.mp4" type="video/mp4">
+
+    [![Video Title](https://img.youtube.com/vi/[VIDEO_ID](https://youtu.be/-D-L5zzvIVU)/0.jpg)](https://www.youtube.com/watch?v=[VIDEO_ID](https://youtu.be/-D-L5zzvIVU))
 </video>
