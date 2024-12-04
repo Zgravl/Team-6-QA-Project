@@ -7,7 +7,7 @@ public class SampleStandardDeviation {
         //preq-LOGIC-3
         List<Double> numbers = new ArrayList<>();
 
-        // Parse the input, ignoring empty lines and spaces
+        //Parse the input, ignoring empty lines and spaces
         for (int i = 0; i < input.size(); i++) {
             String line = input.get(i);
             String trimmed = line.trim();
@@ -20,12 +20,12 @@ public class SampleStandardDeviation {
             }
         }
 
-        // Ensure there's at least one valid numeric value
+        //Ensure there's at least one valid numeric value
         if (numbers.isEmpty()) {
             throw new IllegalArgumentException("No valid numeric values provided.");
         }
 
-        // Calculate the mean
+        //Calculate the mean
         double sum = 0;
         for (int i = 0; i < numbers.size(); i++) {
             double num = numbers.get(i);
@@ -33,7 +33,7 @@ public class SampleStandardDeviation {
         }
         double mean = sum / numbers.size();
 
-        // Calculate the sample variance
+        //Calculate the sample variance
         double varianceSum = 0;
         for (int i = 0; i < numbers.size(); i++) {
             double num = numbers.get(i);
@@ -41,7 +41,7 @@ public class SampleStandardDeviation {
         }
         double sampleVariance = varianceSum / (numbers.size() - 1);
 
-        // Return the sample standard deviation
+        //Return the sample standard deviation
         return Math.sqrt(sampleVariance);
     }
 }
