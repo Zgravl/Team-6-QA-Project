@@ -14,16 +14,16 @@ This repository contains an overview of our team's web-based calculator project.
 
 - Core Calculator Logic Module
     - This module contains the core computational functionality.
-    - It is implemented in java, separate form the web server or user interface.
-    - Responsibility : Accept inputs, perform calculations, and return results.
+    - It is implemented in Java, separate from the web server or user interface.
+    - Responsibility: Accept inputs, perform calculations, and return results.
 - Unit Test Module
-    - The Unit tests ensure that the logic in the Calculator works as expected, independently of the web server or user interface.
-    - This module is crucial for identifying and fixing bugs early in the development process.
+    The Unit tests ensure that the calculator's logic works as expected, independently of the web server or user interface.
+    - This module is crucial for identifying and fixing bugs early in development.
     - Responsibility: Validate each method's correctness under normal, edge, and error conditions.
 - Relationships
     - Unit tests provide inputs to the methods and verify that the outputs match expected values.
-    - Unit tests simulate edge cases to (e.g., dividing by zero) to ensure that the logic handles these correctly.
-    - Unit tests also act as a regression preventer, making sure that new changes don't break exisiting functionality.
+    - Unit tests simulate edge cases (e.g., dividing by zero) to ensure the logic handles these correctly.
+    - Unit tests also act as a regression preventer, making sure that new changes don't break existing functionality.
 <image src="README.assets/Architecture Diagram.png">
   
 ### Modules: 
@@ -31,40 +31,40 @@ This repository contains an overview of our team's web-based calculator project.
   - SampleStandardDeviation: Takes a list of one or more numeric values (one per line) and computes the sample standard deviation.
   - PopulationStandardDeviation: Takes a list of two or more numeric values (one per line) and computes the population standard deviation.
   - Mean: Takes a list of one or more numeric values (one per line) and computes the mean
-  - ZScore: Takes a list of three numeric values (three values seperated by commas on one line) and computes the ZScore
+  - ZScore: Takes a list of three numeric values (three values separated by commas on one line) and computes the ZScore
   - LinearRegression: Takes a list of two or more x,y number pairs (only one pair per line) and computes the Single Linear Regression
-  - RegressionPrediction: Takes a list of three numeric values (three values seperated by commas on one line) and predicts Y from the linear regression formula
+  - RegressionPrediction: Takes a list of three numeric values (three values separated by commas on one line) and predicts Y from the linear regression formula
 - **Unit Tests**
   - each logic module has a corresponding test module which tests all lines of logic and error handling
-  - each unit test has 100% coverage for their corresponding logic module
+  - each unit test has 100% coverage for its corresponding logic module
 
 
 ## Environment
-This application has only been tested in Windows 10 an Windows 11 but should work in Mac and linux environments<br>
+This application has only been tested in Windows 10 and Windows 11 but should work in Mac and Linux environments<br>
 [To prepare your environment to execute this application]:<br>
 __Set up Java and Oracle JDK__
 1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
 2. [Install the latest version of Oracle JDK.](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
 3. After installing the JDK, search for Environment Variables in the start menu.
-4. Under system Variables click New and set the cariable name to ```JAVA_HOME``` and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK.
-5. Find the ```path``` variable under System Variable and double click it.
+4. Under system Variables click New and set the variable name to ```JAVA_HOME``` and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK.
+5. Find the ```path``` variable under System Variable and double-click it.
 6. Press new and add ```%JAVA_HOME%\bin``` to the list and hit OK.
 
 __Set up Maven__
 1. First ensure that java and JDK are installed you can do this by executing ```java -version``` and ```javac -version``` in the command line.
 2. [Install the latest version of Apache Maven.](https://www.geeksforgeeks.org/how-to-install-apache-maven-on-windows/)
 3. After installing, search for Environment Variables in the start menu.
-4. Under system Variables click New and set the cariable name to ```MAVEN_HOME``` and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK.
-5. Find the ```path``` variable under System Variable and double click it.
+4. Under System Variables click New and set the variable name to ```MAVEN_HOME``` and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK.
+5. Find the ```path``` variable under System Variable and double-click it.
 6. Press new and add ```%MAVEN_HOME%\bin``` to the list and hit OK.
 7. verify the installation by executing the command ```mvn -v``` in a command prompt and it should display the version of Maven and Java you have installed.
 
 ## Executing Unit Tests
-1. Make sure that you have maven, java, as well as a jdk installed installed
+1. Make sure that you have maven, java, as well as a JDK installed installed
 2. Open the project file on your computer and copy the address of the first src file (This should look something like C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
-3. open your terminal/command prompt and give the command cd + the addres for your root file (Should look something like cd C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
+3. open your terminal/command prompt and give the command cd + the address for your root file (Should look something like cd C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
 4. To run the test execute the command ```mvn test```
-5. If maven, java, and your jdk are properly installed it should return something like:
+5. If Maven, java, and your JDK are properly installed it should return something like this:
 
 ```plaintext
 [INFO] -------------------------------------------------------
@@ -96,7 +96,7 @@ __Set up Maven__
 ```
 
 ## Reviewing Unit Test Coverage
-The tests for each class achieve a 100% covereage on all statements and paths
+The tests for each class achieve a 100% coverage on all statements and paths
 <image src="README.assets/Coverage Test.PNG">
 
 ## Final Video Presentation
