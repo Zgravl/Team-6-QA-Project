@@ -50,7 +50,10 @@ This application has only been tested in Windows 10 an Windows 11 but should wor
 1. Make sure that you have maven, java, as well as a jdk installed installed
 2. Open the project file on your computer and copy the address of the first src file (This should look something like C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
 3. open your terminal/command prompt and give the command cd + the addres for your root file (Should look something like cd C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
-4. To run the test type __mvn test__ into the command prompt or __mvn clean test__ to clear any previously compiled classes before testing
+4. To run the test execute the folling command:
+```
+mvn test
+```
 5. If maven, java, and your jdk are properly installed it should return something like
 
 ```plaintext
