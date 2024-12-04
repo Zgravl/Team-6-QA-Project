@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Mean {
     public static double calculateMean(List<String> input) throws IllegalArgumentException {
+        //preq-LOGIC-5
         List<Double> numbers = new ArrayList<>();
 
         // Parse the input, ignoring empty lines and spaces
