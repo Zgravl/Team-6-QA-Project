@@ -7,7 +7,6 @@ This repository contains an overview of our team's web-based calculator project.
 - [Executing the Web Application](#executing-the-web-application)
 - [Executing Unit Tests](#executing-unit-tests)
 - [Reviewing Unit Test Coverage](#reviewing-unit-test-coverage)
-- [Executing End-To-End Tests](#executing-end-to-end-tests)
 - [Final Video Presentation](#final-video-presentation)
 
 ### Team Members: Zakkary Byrd, Jonah Gardin
@@ -109,8 +108,5 @@ This application has only been tested in Windows 10 an Windows 11 but should wor
 ## Reviewing Unit Test Coverage
 The tests for each class achieve a 100% covereage on all statements and paths
 <image src="README.assets/image_13251241.PNG">
-
-## Executing End-To-End Tests
-
 
 ## Final Video Presentation
