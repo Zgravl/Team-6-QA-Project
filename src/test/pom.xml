@@ -8,6 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>test</artifactId>
+         <name>${project.artifactId}-${project.version}</name>
 
     <dependencies>
     <dependency>
@@ -27,6 +28,8 @@
     </dependency>
     </dependencies>
 <build>
+                <testSourceDirectory>test/src/main/java</testSourceDirectory>
+        <sourceDirectory>calculatorlogic/src/main/java</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
