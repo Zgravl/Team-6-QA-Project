@@ -2,7 +2,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 public class SampleStandardDeviation {
     public static double calculateSampleStandardDeviation(List<String> input) throws IllegalArgumentException {
         List<Double> numbers = new ArrayList<>();
