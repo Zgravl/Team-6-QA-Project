@@ -1,7 +1,6 @@
 
 import java.util.List;
 
-@Service
 public class RegressionPrediction {
     public static String predictYValue(List<String> input) throws IllegalArgumentException {
         // Ensure there is exactly one line of input
