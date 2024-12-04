@@ -40,12 +40,12 @@ This repository contains an overview of our team's web-based calculator project.
 
 ## Environment
 This application has only been tested in Windows 10 an Windows 11 but should work in Mac and linux environments<br>
-[To prepare your environment to execute this application]:
+[To prepare your environment to execute this application]:<br>
 __Set up Java and Oracle JDK__
 1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
 2. [Install the latest version of Oracle JDK.](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
 3. After installing the JDK, search for Environment Variavles in the start menu.
-4. Under system Variables click New and set the cariable name to __JAVA_HOME__ and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK.
+4. Under system Variables click New and set the cariable name to ```JAVA_HOME``` and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK.
 5. Find the ```path``` variable under System Variable and double click it.
 6. Press new and add ```%JAVA_HOME%\bin``` to the list and hit OK.
 
