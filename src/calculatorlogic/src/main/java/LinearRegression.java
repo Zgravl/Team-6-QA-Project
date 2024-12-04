@@ -1,6 +1,10 @@
+
+package com.example.demo.service;
+import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class LinearRegression{
     public static String calculateLinearRegression(List<String> input) throws IllegalArgumentException {
         List<Double> xValues = new ArrayList<>();
