@@ -1,5 +1,7 @@
+import org.springframework.stereotype.Service;
 import java.util.List;
 
+@Service
 public class ZScore{
     public static double calculateZScore(List<String> input) throws IllegalArgumentException {
         // Ensure there is exactly one line of input
