@@ -4,6 +4,7 @@ import java.util.List;
 
 public class PopulationStandardDeviation{
     public static double calculatePopulationStandardDeviation(List<String> input) throws IllegalArgumentException {
+        //preq-LOGIC-4
         List<Double> numbers = new ArrayList<>();
 
         // Parse the input, ignoring empty lines and spaces
