@@ -1,5 +1,6 @@
 # KSU SWE 3643 Software Testing and Quality Assurance Semester Project: Web-Based Calculator
-This repository contains an overview of our team's web-based calculator project. This includes the logic for the calculator and the unit tests. 
+This repository contains an overview of our team's web-based calculator project. This includes the logic for the calculator and the unit tests.
+This project was completed as of 11:40PM 12/3/2024
 ## Table of Contents
 - [Team Members](#team-members)
 - [Architecture](#architecture)
