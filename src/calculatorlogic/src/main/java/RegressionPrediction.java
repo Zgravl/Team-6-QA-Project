@@ -3,14 +3,15 @@ import java.util.List;
 
 public class RegressionPrediction {
     public static String predictYValue(List<String> input) throws IllegalArgumentException {
-        // Ensure there is exactly one line of input
+        //preq-LOGIC-8
+        //Ensure there is exactly one line of input
         if (input.size() != 1) {
             throw new IllegalArgumentException("Input must contain exactly one line with three numeric values separated by commas.");
         }
 
         String line = input.get(0).trim();
 
-        // Split the line into values separated by commas
+        //Split the line into values separated by commas
         String[] parts = line.split(",");
         if (parts.length != 3) {
             throw new IllegalArgumentException("The input must contain exactly three numeric values separated by commas.");
@@ -25,10 +26,10 @@ public class RegressionPrediction {
             throw new IllegalArgumentException("All three values must be numeric.");
         }
 
-        // Calculate the Y value using the regression formula
+        //Calculate the Y value using the regression formula
         double y = m * x + b;
 
-        // Return the result in the specified format
+        //Return the result in the specified format
         return String.format("y = %.15f", y);
     }
 }
