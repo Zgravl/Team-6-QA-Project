@@ -2,7 +2,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 public class Mean {
     public static double calculateMean(List<String> input) throws IllegalArgumentException {
         List<Double> numbers = new ArrayList<>();
