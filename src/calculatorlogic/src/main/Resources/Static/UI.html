@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f9;
+        }
+
+
+        .calculator-container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+        }
+
+
+        .result-box-default {
+            background-color: #FFECD7;
+            color: #000000;
+        }
+        .result-box-error {
+            background-color: #B70F0A;
+            color: #FFFFFF;
+        }
+
+
+        button {
+            background-color: #EBEBEB;
+            color: #000000;
+            border: 2px solid #000000;
+            border-radius: 5px;
+        }
+
+
+        .input-box {
+            border: 2px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+        }
+
+
+        .header {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="calculator-container">
+    <!-- Title and Clear Button -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="m-0">Calculator</h1>
+        <button class="btn" style="border: 2px solid #000000; border-radius: 5px; padding: 10px; width: 300px;" onclick="clearCalculator()">Clear</button>
+    </div>
+
+
+    <div id="resultBox" class="p-3 rounded result-box-default text-center mb-4" style="font-weight: bold;">
+        Enter values below and select an operation.
+    </div>
+
+
+    <div class="mb-4">
+        <div class="header">Values</div>
+        <textarea id="valuesInput" class="form-control input-box" rows="5" ></textarea>
+    </div>
+
+
+    <div class="mb-4">
+        <div class="header">Descriptive Statistics</div>
+        <button class="w-100 mb-2" onclick="calculateSampleStandardDeviation()">Compute Sample Standard Deviation | one value per line</button>
+        <button class="w-100 mb-2" onclick="calculatePopulationStandardDeviation()">Compute Population Standard Deviation | one value per line</button>
+        <button class="w-100 mb-2" onclick="calculateMean()">Compute Mean | one value per line</button>
+        <button class="w-100 mb-2" onclick="calculateZScore()">Compute Z Score | value, mean, stdDev on one line</button>
+    </div>
+
+
+    <div class="mb-4">
+        <div class="header">Single Linear Regression</div>
+        <button class="w-100 mb-2" onclick="calculateLinearRegression()">Compute Single Linear Regression Formula | one x,y pair per line</button>
+        <button class="w-100 mb-2" onclick="predictY()">Predict Y from Linear Regression Formula | x, m, b on one line</button>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+
+      function clearCalculator() {
+    document.getElementById('resultBox').innerText = "Enter values below and select an operation.";
+    document.getElementById('resultBox').className = "p-3 rounded result-box-default text-center mb-4";
+    document.getElementById('valuesInput').value = "";
+}
+
+function calculateSampleStandardDeviation() {
+    const values = parseInput();
+    if (!values) return;
+
+    fetch('/api/calculate-sample-std-dev', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to calculate sample standard deviation");
+            }
+            return response.json();
+        })
+        .then(stdDev => {
+            displayResult("Sample Standard Deviation", stdDev.toFixed(2));
+        })
+        .catch(error => {
+            displayError("Error calculating sample standard deviation: " + error.message);
+        });
+}
+
+
+
+function calculatePopulationStandardDeviation() {
+    const values = parseInput();
+    if (!values) return;
+
+    fetch('/api/calculate-population-std-dev', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to calculate population standard deviation");
+            }
+            return response.json();
+        })
+        .then(stdDev => {
+            displayResult("Population Standard Deviation", stdDev.toFixed(2));
+        })
+        .catch(error => {
+            displayError("Error calculating population standard deviation: " + error.message);
+        });
+}
+
+
+function calculateMean() {
+    const values = parseInput();
+    if (!values) return;
+
+    fetch('/api/calculate-mean', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(values)
+})
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Failed to calculate mean");
+        }
+        return response.json();
+    })
+    .then(mean => {
+        displayResult("Mean", mean.toFixed(2));
+    })
+    .catch(error => {
+        displayError("Error calculating mean: " + error.message);
+    });
+}
+         function displayError(message) {
+    const resultBox = document.getElementById('resultBox');
+    resultBox.innerText = message;
+    resultBox.className = "p-3 rounded result-box-error text-center mb-4";
+  }
+
+
+
+
+
+    function calculateZScore() {
+        const input = document.getElementById('inputValues').value.trim();
+
+        // Ensure that input is a single line of text with the format value,mean,stdDev
+        const inputValues = [input];  // Wrap the input in an array of strings (List<String>)
+
+        if (inputValues.length === 0 || inputValues[0] === "") {
+            displayError("Please enter the values in the format value,mean,stdDev.");
+            return;
+        }
+
+        // Send the list of strings (inputValues) as JSON to the backend
+        fetch('/api/calculate-zscore', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(inputValues)  // Send it as a JSON array of strings
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                displayError(data.error);
+            } else {
+                displayResult("Z-Score", data.result);
+            }
+        })
+        .catch(error => {
+            displayError("Error calculating Z-Score: " + error.message);
+        });
+    }
+
+
+
+
+function calculateLinearRegression() {
+        const input = document.getElementById('valuesInput').value.trim().split('\n').map(line => line.trim());
+
+
+        fetch('/api/calculate-linear-regression', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(input)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(errMessage => {
+                        throw new Error(errMessage);
+                    });
+                }
+                return response.text();
+            })
+            .then(regressionFormula => {
+                displayResult("Linear Regression Formula", regressionFormula);
+            })
+            .catch(error => {
+                displayError("Error calculating linear regression: " + error.message);
+            });
+    }
+
+
+
+function predictY() {
+        const input = document.getElementById('inputValues').value.trim();
+
+       const inputvalues = [input]
+
+        fetch('/api/predict-y', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify([input])
+        })
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(errMessage => {
+                        throw new Error(errMessage);
+                    });
+                }
+                return response.text();
+            })
+            .then(predictedY => {
+                displayResult("Predicted Y Value", predictedY);
+            })
+            .catch(error => {
+                displayError("Error predicting Y value: " + error.message);
+            });
+    }
+
+
+
+
+
+  function displayResult(operation, result) {
+    const resultBox = document.getElementById('resultBox');
+    resultBox.innerHTML = `${operation} =<br>${result}`;
+    resultBox.className = "p-3 rounded result-box-default text-center mb-4";
+}
+
+  function parseInput() {
+    const input = document.getElementById('valuesInput').value.split('\n').map(val => val.trim());
+    const numbers = [];
+    for (const val of input) {
+        if (val === "") {
+            console.log("Skipping empty value");
+            continue;
+        }
+        if (isNaN(val)) {
+            displayError("Invalid Input, Numbers Only");
+            return null;
+        }
+        numbers.push(Number(val));
+    }
+    return numbers;
+}
+
+  function handleError(operator) {
+    const values = parseInput();
+    if (!values) return;
+
+    if (operator === '/' && values[1] === 0) {
+      displayError(`${values[0]} / ${values[1]} =<br>Not a Number`);
+      return;
+    }
+  }
+
+   </script>
+</body>
+</html>
