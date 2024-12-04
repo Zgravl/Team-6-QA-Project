@@ -1,6 +1,9 @@
+package com.example.demo.service;
+import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class PopulationStandardDeviation{
     public static double calculatePopulationStandardDeviation(List<String> input) throws IllegalArgumentException {
         List<Double> numbers = new ArrayList<>();
