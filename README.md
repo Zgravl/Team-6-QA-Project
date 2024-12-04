@@ -55,7 +55,7 @@ __Set up Maven__
 2. [Install the latest version of Apache Maven.](https://maven.apache.org/)
 3. [Steps on how to install](https://www.geeksforgeeks.org/how-to-install-apache-maven-on-windows/)
 4. After installing, search for Environment Variables in the start menu.
-5. Under System Variables click New and set the variable name to ```MAVEN_HOME``` and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK.
+5. Under System Variables click New and set the variable name to ```MAVEN_HOME``` and set the variable value to the path you installed the JDK (ex: C:\Program Files\apache-maven-XX) and hit OK.
 6. Find the ```path``` variable under System Variable and double-click it.
 7. Press new and add ```%MAVEN_HOME%\bin``` to the list and hit OK.
 8. verify the installation by executing the command ```mvn -v``` in a command prompt and it should display the version of Maven and Java you have installed.
