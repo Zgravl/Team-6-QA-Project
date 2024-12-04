@@ -4,7 +4,7 @@ import java.util.List;
 
 public class SampleStandardDeviation {
     public static double calculateSampleStandardDeviation(List<String> input) throws IllegalArgumentException {
-        preq-LOGIC-3
+        //preq-LOGIC-3
         List<Double> numbers = new ArrayList<>();
 
         // Parse the input, ignoring empty lines and spaces
