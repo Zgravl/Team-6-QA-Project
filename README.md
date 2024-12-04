@@ -101,5 +101,7 @@ The tests for each class achieve a 100% coverage on all statements and paths
 <image src="README.assets/Coverage Test.PNG">
 
 ## Final Video Presentation
-
-[![Watch the video](https://cdn-icons-png.flaticon.com/512/5667/5667341.png)](video src="REAME.assets/PresentationVideo.mp4")
+<video width="100%" controls>
+  <source src="README.assets/PresentationVideo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
