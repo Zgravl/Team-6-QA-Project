@@ -103,5 +103,4 @@ The tests for each class achieve a 100% coverage on all statements and paths
 ## Final Video Presentation
 <video width="100%" controls>
   <source src="README.assets/PresentationVideo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
