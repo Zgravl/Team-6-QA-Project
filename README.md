@@ -46,29 +46,6 @@ This application has only been tested in Windows 10 an Windows 11 but should wor
 2. [Install the latest version of Oracle JDK.](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
 3. [Install the latest version of Apache Maven.](https://www.geeksforgeeks.org/how-to-install-apache-maven-on-windows/)
 
-[Setting up Playwright for End-To-End testing]
-1. [Intall Node.js](https://nodejs.org/en)
-2. You can check if it is installed by opening your command line and entering __node --version__ and seeing if it returns something like __v22.12.0__
-3. Inialize a Node.js project by entering into your command line __npm init -y__ to which it would return something similar to:
-```
-{
-  "name": "user",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
-}
-```
-4. To install playwright type into the command line __npm install playwright__
-
-## Executing the Web Application 
-
-
 ## Executing Unit Tests
 1. Make sure that you have maven, java, as well as a jdk installed installed
 2. Open the project file on your computer and copy the address of the first src file (This should look something like C:\Users\user\Documents\Team-6-QA-Project-main\Team-6-QA-Project-main\src)
