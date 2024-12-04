@@ -4,10 +4,11 @@ import java.util.List;
 
 public class LinearRegression{
     public static String calculateLinearRegression(List<String> input) throws IllegalArgumentException {
+        //preq-LOGIC-7
         List<Double> xValues = new ArrayList<>();
         List<Double> yValues = new ArrayList<>();
 
-        // Parse the input, ignoring empty lines and spaces
+        //Parse the input, ignoring empty lines and spaces
         for (int i = 0; i < input.size(); i++) {
             String line = input.get(i).trim();
             if (!line.isEmpty()) {
@@ -27,12 +28,12 @@ public class LinearRegression{
             }
         }
 
-        // Ensure there are at least two X, Y pairs
+        //Ensure there are at least two X, Y pairs
         if (xValues.size() < 2 || yValues.size() < 2) {
             throw new IllegalArgumentException("There must be at least two valid X, Y pairs.");
         }
 
-        // Calculate the means of X and Y
+        //Calculate the means of X and Y
         double sumX = 0, sumY = 0;
         for (int i = 0; i < xValues.size(); i++) {
             sumX += xValues.get(i);
@@ -41,7 +42,7 @@ public class LinearRegression{
         double meanX = sumX / xValues.size();
         double meanY = sumY / yValues.size();
 
-        // Calculate the slope (m) and intercept (b)
+        //Calculate the slope (m) and intercept (b)
         double numerator = 0;
         double denominator = 0;
         for (int i = 0; i < xValues.size(); i++) {
@@ -58,7 +59,7 @@ public class LinearRegression{
         double slope = numerator / denominator;
         double intercept = meanY - slope * meanX;
 
-        // Return the linear regression formula as a string
+        //Return the linear regression formula as a string
         return String.format("y = %.15fx + %.15f", slope, intercept);
     }
 }
