@@ -16,4 +16,9 @@
         <version>5.3.25</version> <!-- Or a compatible version -->
     </dependency>
     </dependencies>
+
+    <build>
+        <testSourceDirectory>test/src/main/java</testSourceDirectory>
+        <sourceDirectory>calculatorlogic/src/main/java</sourceDirectory>
+    </build>
 </project>
