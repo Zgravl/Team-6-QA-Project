@@ -42,9 +42,10 @@ This repository contains an overview of our team's web-based calculator project.
 This application has only been tested in Windows 10 an Windows 11 but should work in Mac and linux environments<br>
 [To prepare your environment to execute this application]:
 1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
-2. 
-[Install the latest version of Oracle JDK.](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
-1. You will need to 
+2. [Install the latest version of Oracle JDK.](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk23-windows)
+3. After you run the installer for the JDK, search for Environment Variavles in the start menu
+4. Under system Variables click New and set the cariable name to __JAVA_HOME__ and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK
+5. Find the ```path``` variable under System Variable and double click it 
 [Install the latest version of Apache Maven.](https://www.geeksforgeeks.org/how-to-install-apache-maven-on-windows/)
 
 ## Executing Unit Tests
