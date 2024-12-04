@@ -28,6 +28,7 @@
     </dependency>
     </dependencies>
 <build>
+         <testSourceDirectory>test/src/main/java</testSourceDirectory>
         <sourceDirectory>calculatorlogic/src/main/java</sourceDirectory>
         <plugins>
             <plugin>
