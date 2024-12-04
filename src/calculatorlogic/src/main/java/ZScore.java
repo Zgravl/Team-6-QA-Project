@@ -3,6 +3,7 @@ import java.util.List;
 
 public class ZScore{
     public static double calculateZScore(List<String> input) throws IllegalArgumentException {
+        //preq-LOGIC-6
         // Ensure there is exactly one line of input
         if (input.size() != 1) {
             throw new IllegalArgumentException("Input must contain exactly one line.");
