@@ -52,7 +52,7 @@ __Set up Java and Oracle JDK__
 
 __Set up Maven__
 1. First ensure that java and JDK are installed you can do this by executing ```java -version``` and ```javac -version``` in the command line.
-2. [Install the latest version of Apache Maven.](https://www.geeksforgeeks.org/how-to-install-apache-maven-on-windows/)
+2. [Install the latest version of Apache Maven.]([https://www.geeksforgeeks.org/how-to-install-apache-maven-on-windows/](https://maven.apache.org/))
 3. After installing, search for Environment Variables in the start menu.
 4. Under System Variables click New and set the variable name to ```MAVEN_HOME``` and set the variable value to the path you installed the JDK (ex: C:\Program Files\Java\jdk-XX) and hit OK.
 5. Find the ```path``` variable under System Variable and double-click it.
